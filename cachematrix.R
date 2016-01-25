@@ -30,10 +30,10 @@ makeCacheMatrix <- function(X = matrix())
 	list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
 }
 
-## assumes a package like corpcor has been installed and loaded from a CRAN mirror
-## type ??inverse or for an example which contains pseudoinverse: http://127.0.0.1:15599/library/corpcor/html/pseudoinverse.html
 ## Function - cacheSolve: This function computes the inverse of the special "matrix" returned by makeCacheMatrix above
 ## If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
+## assumes a package like corpcor has been installed and loaded from a CRAN mirror
+## type ??inverse or for an example which contains pseudoinverse: http://127.0.0.1:15599/library/corpcor/html/pseudoinverse.html
 
 cacheSolve <- function(X, ...) 
 {
